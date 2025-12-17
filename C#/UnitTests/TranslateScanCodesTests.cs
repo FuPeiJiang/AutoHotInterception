@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using AutoHotInterception.Helpers;
 using NUnit.Framework;
 using static AutoHotInterception.Helpers.ManagedWrapper;
