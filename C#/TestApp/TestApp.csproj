@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<!-- <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" /> -->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,7 +9,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>TestApp</RootNamespace>
     <AssemblyName>TestApp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <!-- <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion> -->
+    <TargetFramework>net481</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -41,7 +43,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>
+  <!-- <ItemGroup>
     <Compile Include="Helpers\AhkKeys.cs" />
     <Compile Include="Helpers\MouseButtons.cs" />
     <Compile Include="KeyboardAndMouseTester.cs" />
@@ -56,7 +58,7 @@
     <Compile Include="ScanCodeTester.cs" />
     <Compile Include="SetStateTester.cs" />
     <Compile Include="TabletTester.cs" />
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
@@ -67,7 +69,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> -->
   <PropertyGroup>
     <PreBuildEvent>if not exist "$(TargetDir)\x86" mkdir "$(TargetDir)\x86"
 if not exist "$(TargetDir)\x64" mkdir "$(TargetDir)\x64"

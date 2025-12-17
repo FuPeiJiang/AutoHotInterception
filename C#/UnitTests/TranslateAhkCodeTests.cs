@@ -7,7 +7,7 @@ namespace UnitTests
     [TestFixture]
     class TranslateAhkCodeTests
     {
-        [Test, TestCaseSource("TestKeyProvider")]
+        [Test, TestCaseSource(nameof(TestKeyProvider))]
         public void PressRelease(string name, int code, List<ManagedWrapper.Stroke> pressResult, List<ManagedWrapper.Stroke> releaseResult)
         {
             var actualResult = ScanCodeHelper.TranslateAhkCode((ushort)code, 1);

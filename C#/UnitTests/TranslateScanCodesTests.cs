@@ -57,7 +57,7 @@ namespace UnitTests
             return results;
         }
 
-        [Test, TestCaseSource("TestKeyProvider")]
+        [Test, TestCaseSource(nameof(TestKeyProvider))]
         public void PressRelease(string name, List<Stroke> pressStrokes, List<Stroke> releaseStrokes, ExpectedResult pressResult, ExpectedResult releaseResult )
         {
             Debug.WriteLine($"\nTesting key {name}...");
